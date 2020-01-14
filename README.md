@@ -3,6 +3,8 @@ Module for [i3pystatus](https://github.com/enkore/i3pystatus) for showing roamin
 
 Requires PyPI package `requests`
 
+![Screenshot](https://i.imgur.com/eDtOJCn.png)
+
 ## Usage
 Install from PyPI
 ```
