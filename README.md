@@ -5,7 +5,9 @@ Requires PyPI package `requests`
 
 ## Usage
 Install from PyPI
-`pip install i3pystatuscontrib.elisaroaming`
+```
+pip install i3pystatuscontrib.elisaroaming
+```
 
 Add module to your configuration file
 ```python
