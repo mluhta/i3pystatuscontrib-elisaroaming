@@ -10,7 +10,7 @@ class ElisaRoaming(IntervalModule):
     """
     Fetches used roaming quota information from OmaElisa.
 
-    Requires PyPI packages `requests`.
+    Requires PyPI package `requests`.
 
     .. rubric:: Available formatters
 
