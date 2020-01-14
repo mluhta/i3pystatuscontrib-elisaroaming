@@ -36,11 +36,6 @@ class ElisaRoaming(IntervalModule):
     color = "#FFFFFF"
     color_warning = "#ff0000"
 
-    # TODO: use keyring instead
-    email = "" # OmaElisa username/email
-    password = "" # OmaElisa password
-    number = "1234567" # Target phone number
-
     warning_percentage = 0.8
 
     @require(internet)
@@ -95,6 +90,14 @@ class ElisaRoaming(IntervalModule):
         self.output = None
 
     def run(self):
+        # Check that we have credentials
+        # TODO: use keyring
+        if not self.email or not self.password or not self.number:
+            self.output = {
+                    "full_text": "ROAM: FAIL!",
+                    "color": "#ff0000",
+            }
+            return 
         usage = self.get_roaming_info()
         if not usage:
             return self.disable()
